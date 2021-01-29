@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blog
+  template:
+    metadata:
+      labels:
+        app: blog
+    spec:
+      containers:
+        - name: app
+          image: ve5li/blog:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_URL
+              value: postgres
+          imagePullPolicy: Always
+
