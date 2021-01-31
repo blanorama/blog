@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: blanorama/blog:latest
+          image: ghcr.io/blanorama/blog
           ports:
             - containerPort: 8080
           env:
