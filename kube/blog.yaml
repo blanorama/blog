@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: ve5li/blog:latest
+          image: blanorama/blog:latest
           ports:
             - containerPort: 8080
           env:
